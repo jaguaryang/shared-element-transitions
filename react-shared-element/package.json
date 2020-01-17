@@ -2,6 +2,7 @@
   "name": "react-shared-element",
   "version": "0.1.0",
   "private": true,
+  "main": "lib/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -14,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-webpack": "webpack build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,6 +34,7 @@
     ]
   },
   "devDependencies": {
-    "html2canvas": "^1.0.0-rc.5"
+    "html2canvas": "^1.0.0-rc.5",
+    "webpack-cli": "^3.3.10"
   }
 }
