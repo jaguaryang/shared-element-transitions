@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
-    "react-shared-element": "^0.0.2"
+    "react-shared-element": "^0.0.2",
+    "serialize-javascript": "^2.1.2"
   }
 }
