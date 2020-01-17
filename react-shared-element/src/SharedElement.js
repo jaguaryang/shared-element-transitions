@@ -1,14 +1,12 @@
 import React from 'react'
 import html2canvas from 'html2canvas'
+import PropTypes from 'prop-types';
 
 class SharedElement extends React.Component {
 
   constructor(props) {
     // console.log('constructor')
     super(props);
-    this.state = {
-      duration: 300,
-    }
   }
 
   componentDidMount() {
@@ -22,7 +20,7 @@ class SharedElement extends React.Component {
   }
 
   generate = (callback) => {
-    const { id } = this.props
+    const { id, duration } = this.props
     if (!id) return
 
     let current = document.getElementById(id)
@@ -35,7 +33,7 @@ class SharedElement extends React.Component {
     }
 
     node = document.createElement("DIV");
-    node.setAttribute("style", "display: none; position: absolute; background-size: 100% 100%; transition: all " + (this.state.duration / 1000) + "s;");
+    node.setAttribute("style", "display: none; position: absolute; background-size: 100% 100%; transition: all " + (duration / 1000) + "s;");
     node.id = id_common;
     document.body.appendChild(node);
 
@@ -51,7 +49,7 @@ class SharedElement extends React.Component {
   }
 
   transition = () => {
-    const { id } = this.props
+    const { id, duration } = this.props
     if (!id) return
 
     let id_common = id + "-common"
@@ -84,14 +82,14 @@ class SharedElement extends React.Component {
         }
         this.visible(true)
         this.generate()
-      }, this.state.duration);
+      }, duration);
     })
   }
 
   visible = (bol) => {
     const { id } = this.props
     if (!id) return
-    
+
     let current = document.getElementById(id)
     current.parentNode.style.opacity = bol ? 1 : 0
   }
@@ -105,6 +103,15 @@ class SharedElement extends React.Component {
       </div>
     )
   }
+}
+
+SharedElement.propTypes = {
+  id: PropTypes.string.isRequired,
+  duration: PropTypes.number,
+}
+
+SharedElement.defaultProps = {
+  duration: 300,
 }
 
 export default SharedElement
