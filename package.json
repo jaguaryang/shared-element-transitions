@@ -1,9 +1,0 @@
-{
-  "name": "shared-element-transitions",
-  "version": "1.0.0",
-  "description": "shared element transitions between routers for React, Vue and Angular",
-  "main": "index.js",
-  "repository": "https://github.com/jaguaryang/shared-element-transitions",
-  "author": "Jack yang",
-  "license": "MIT"
-}
