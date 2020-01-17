@@ -14,6 +14,10 @@ class SharedElement extends React.Component {
   componentDidMount() {
     // console.log('componentDidMount')
     this.transition()
+  }
+
+  componentDidUpdate() {
+    // console.log('componentDidUpdate')
     this.generate()
   }
 
@@ -24,9 +28,15 @@ class SharedElement extends React.Component {
     let current = document.getElementById(id)
     if (!current) return
 
-    var node = document.createElement("DIV");
-    node.setAttribute("style", "display:none; position: absolute; background-size: 100% 100%; transition: all " + (this.state.duration / 1000) + "s;");
-    node.id = id + "-common";
+    let id_common = id + "-common"
+    let node = document.getElementById(id_common)
+    if (node) {
+      node.remove();
+    }
+
+    node = document.createElement("DIV");
+    node.setAttribute("style", "display: none; position: absolute; background-size: 100% 100%; transition: all " + (this.state.duration / 1000) + "s;");
+    node.id = id_common;
     document.body.appendChild(node);
 
     html2canvas(current, { scale: 1 }).then(canvas => {
@@ -44,16 +54,16 @@ class SharedElement extends React.Component {
     const { id } = this.props
     if (!id) return
 
-    let node = document.getElementById(id + "-common")
+    let id_common = id + "-common"
+    let node = document.getElementById(id_common)
     if (!node) {
       this.visible(true)
+      this.generate()
       return
     }
-
     node.style.display = 'block'
 
     let current = document.getElementById(id)
-    if (!current) return
 
     if (this.props.transitionStart) {
       this.props.transitionStart()
@@ -73,22 +83,24 @@ class SharedElement extends React.Component {
           this.props.transitionStop()
         }
         this.visible(true)
+        this.generate()
       }, this.state.duration);
     })
   }
 
   visible = (bol) => {
     const { id } = this.props
+    if (!id) return
+    
     let current = document.getElementById(id)
-    if (!current) return
     current.parentNode.style.opacity = bol ? 1 : 0
   }
 
   render() {
-    console.log('render')
-    const { id, style = {} } = this.props
+    // console.log('render')
+    const { ...props } = this.props
     return (
-      <div id={id} style={style}>
+      <div {...props}>
         {this.props.children}
       </div>
     )
