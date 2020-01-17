@@ -19,16 +19,11 @@ class Component extends React.Component {
     return (
       <div style={{ width: '600px', margin: 'auto', opacity: this.isTransitioning ? 0 : 1 }}>
         <div onClick={e => {
-          this.sharedElement.current.transitionStart(() => {
-            this.props.history.push("/component2")
-          })
+          this.props.history.push("/component2")
         }}>Go Component2</div>
 
         <SharedElement
-          ref={this.sharedElement}
-          shared_id='shared-id-123'
-          transitionStart={() => { this.isTransitioning = true }}
-          transitionStop={() => { this.isTransitioning = false }}
+          id='shared-id-123'
           style={{ width: 400, height: 50, backgroundColor: 'red' }}
         >
           Content of Component1

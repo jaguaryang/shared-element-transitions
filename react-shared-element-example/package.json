@@ -12,7 +12,8 @@
     "react-dom": "^16.12.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.3.0",
+    "react-shared-element": "^1.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,7 +37,6 @@
     ]
   },
   "devDependencies": {
-    "react-shared-element": "^0.0.2",
     "serialize-javascript": "^2.1.2"
   }
 }
