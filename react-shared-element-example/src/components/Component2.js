@@ -29,7 +29,7 @@ class Component extends React.Component {
           shared_id='shared-id-123'
           transitionStart={() => { this.isTransitioning = true }}
           transitionStop={() => { this.isTransitioning = false }}
-          style={{ width: 100, height: 100, backgroundColor: 'green' }}
+          style={{ width: 200, height: 100, backgroundColor: 'green' }}
         >
           Content of Component2
         </SharedElement>
