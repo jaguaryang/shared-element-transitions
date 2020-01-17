@@ -1,15 +1,5 @@
 import React from 'react'
-import SharedElement from './components/SharedElement'
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <SharedElement>eeeerrr</SharedElement>
-      </div>
-    )
-  }
-}
+const App = () => <div>App Content</div>
 
-// module.exports = SharedElement
-export default App
+export default App;
