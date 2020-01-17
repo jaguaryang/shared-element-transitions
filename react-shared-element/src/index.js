@@ -1,11 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import App from './App';
+import SharedElement from './SharedElement'
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
-
-module.hot.accept();
+export default SharedElement

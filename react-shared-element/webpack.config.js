@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
@@ -15,15 +16,11 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   output: {
-    path: __dirname + '/dist',
-    publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].js',
+    path: path.resolve(__dirname, "lib"),
+    libraryTarget: 'commonjs2'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
-  devServer: {
-    contentBase: './dist',
-    hot: true
-  }
 };

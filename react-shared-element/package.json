@@ -1,12 +1,12 @@
 {
-  "name": "minimal-react-webpack-babel-setup",
+  "name": "react-shared-element",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/main.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "test": "echo \"No test specified\" && exit 0",
-    "build": "webpack --config ./webpack.config.js --mode production"
+    "build": "webpack --progress --config ./webpack.config.js --mode production"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
+    "html2canvas": "^1.0.0-rc.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.12.10",
