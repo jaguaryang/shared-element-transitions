@@ -11,6 +11,7 @@ class Component extends React.Component {
     extendObservable(this, {
       isTransitioning: false,
       sharedElement: React.createRef(),
+      height: 200,
     })
   }
 
@@ -24,10 +25,14 @@ class Component extends React.Component {
 
         <SharedElement
           id='shared-id-123'
-          style={{ width: 400, height: 50, backgroundColor: 'red' }}
+          style={{ width: 400, height: this.height, backgroundColor: 'red' }}
         >
           Content of Component1
         </SharedElement>
+
+        <div onClick={e => {
+          this.height = 500
+        }}>Change Props</div>
 
       </div>
     )
