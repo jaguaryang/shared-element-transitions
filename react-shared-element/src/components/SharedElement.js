@@ -1,17 +1,15 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 
 class SharedElement extends React.Component {
 
     constructor() {
-        super();
+        super()
         this.state = {
             title: ""
         };
     }
     render() {
-        return (
-            <div>123</div>
-        );
+        return (<h1>123</h1>)
     }
 
 }
