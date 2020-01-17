@@ -4,23 +4,29 @@ import html2canvas from 'html2canvas'
 class SharedElement extends React.Component {
 
   constructor(props) {
+    // console.log('constructor')
     super(props);
+    this.state = {
+      duration: 300,
+    }
   }
 
   componentDidMount() {
-    this.transitionEnd()
+    // console.log('componentDidMount')
+    this.transition()
+    this.generate()
   }
 
-  transitionStart = (callback) => {
-    let shared_id = this.props.shared_id
-    if (!shared_id) return
+  generate = (callback) => {
+    const { id } = this.props
+    if (!id) return
 
-    let current = document.getElementById(shared_id)
+    let current = document.getElementById(id)
     if (!current) return
 
     var node = document.createElement("DIV");
-    node.setAttribute("style", "position: absolute; background-size: 100% 100%; transition: all .3s;");
-    node.id = shared_id + "-common";
+    node.setAttribute("style", "display:none; position: absolute; background-size: 100% 100%; transition: all " + (this.state.duration / 1000) + "s;");
+    node.id = id + "-common";
     document.body.appendChild(node);
 
     html2canvas(current, { scale: 1 }).then(canvas => {
@@ -34,20 +40,26 @@ class SharedElement extends React.Component {
     })
   }
 
-  transitionEnd = () => {
-    let shared_id = this.props.shared_id
-    if (!shared_id) return
+  transition = () => {
+    const { id } = this.props
+    if (!id) return
 
-    let node = document.getElementById(shared_id + "-common")
-    if (!node) return
+    let node = document.getElementById(id + "-common")
+    if (!node) {
+      this.visible(true)
+      return
+    }
 
-    let current = document.getElementById(shared_id)
+    node.style.display = 'block'
+
+    let current = document.getElementById(id)
     if (!current) return
 
     if (this.props.transitionStart) {
       this.props.transitionStart()
     }
 
+    this.visible(false)
     html2canvas(current, { scale: 1 }).then(canvas => {
       let rect = current.getBoundingClientRect()
       node.style.top = rect.top + 'px'
@@ -60,15 +72,23 @@ class SharedElement extends React.Component {
         if (this.props.transitionStop) {
           this.props.transitionStop()
         }
-      }, 300);
+        this.visible(true)
+      }, this.state.duration);
     })
   }
 
+  visible = (bol) => {
+    const { id } = this.props
+    let current = document.getElementById(id)
+    if (!current) return
+    current.parentNode.style.opacity = bol ? 1 : 0
+  }
+
   render() {
+    console.log('render')
+    const { id, style = {} } = this.props
     return (
-      <div
-        id={this.props.shared_id}
-        style={this.props.style}>
+      <div id={id} style={style}>
         {this.props.children}
       </div>
     )
