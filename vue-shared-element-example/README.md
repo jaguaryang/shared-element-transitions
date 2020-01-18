@@ -1,4 +1,4 @@
-# vue-shared-element
+# vue-shared-element-example
 
 ## Project setup
 ```

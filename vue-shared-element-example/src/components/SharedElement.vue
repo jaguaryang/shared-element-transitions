@@ -9,7 +9,15 @@ import html2canvas from "html2canvas";
 
 export default {
   name: "SharedElement",
-  props: { id: String, duration: Number },
+  props: {
+    id: String,
+    duration: {
+      type: Number,
+      default: 300
+    },
+    transitionStart: Function,
+    transitionEnd: Function
+  },
   data() {
     return {
       test: 123
@@ -17,6 +25,7 @@ export default {
   },
   methods: {
     transition: function() {
+      // debugger
       if (!this.id) return;
 
       let id_common = this.id + "-common";
@@ -29,8 +38,8 @@ export default {
       node.style.display = "block";
       this.visible(false);
 
-      if (this.props.transitionStart) {
-        this.props.transitionStart();
+      if (this.transitionStart) {
+        this.transitionStart();
       }
 
       let current = document.getElementById(this.id);
@@ -43,8 +52,8 @@ export default {
         node.style.background = "url(" + canvas.toDataURL() + ")";
         setTimeout(() => {
           node.remove();
-          if (this.props.transitionEnd) {
-            this.props.transitionEnd();
+          if (this.transitionEnd) {
+            this.transitionEnd();
           }
           this.visible(true);
           this.generate();
@@ -95,6 +104,10 @@ export default {
   mounted() {
     console.log("mounted");
     this.transition();
+    setTimeout(() => {}, 100);
+  },
+  updated() {
+    this.generate();
   }
 };
 </script>
