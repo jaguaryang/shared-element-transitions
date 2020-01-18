@@ -23,9 +23,6 @@ class SharedElement extends React.Component {
     const { id, duration } = this.props
     if (!id) return
 
-    let current = document.getElementById(id)
-    if (!current) return
-
     let id_common = id + "-common"
     let node = document.getElementById(id_common)
     if (node) {
@@ -37,6 +34,7 @@ class SharedElement extends React.Component {
     node.id = id_common;
     document.body.appendChild(node);
 
+    let current = document.getElementById(id)
     html2canvas(current, { scale: 1 }).then(canvas => {
       let rect = current.getBoundingClientRect()
       node.style.top = rect.top + 'px'
@@ -60,14 +58,13 @@ class SharedElement extends React.Component {
       return
     }
     node.style.display = 'block'
-
-    let current = document.getElementById(id)
+    this.visible(false)
 
     if (this.props.transitionStart) {
       this.props.transitionStart()
     }
 
-    this.visible(false)
+    let current = document.getElementById(id)
     html2canvas(current, { scale: 1 }).then(canvas => {
       let rect = current.getBoundingClientRect()
       node.style.top = rect.top + 'px'
@@ -77,8 +74,8 @@ class SharedElement extends React.Component {
       node.style.background = 'url(' + canvas.toDataURL() + ')'
       setTimeout(() => {
         node.remove();
-        if (this.props.transitionStop) {
-          this.props.transitionStop()
+        if (this.props.transitionEnd) {
+          this.props.transitionEnd()
         }
         this.visible(true)
         this.generate()
