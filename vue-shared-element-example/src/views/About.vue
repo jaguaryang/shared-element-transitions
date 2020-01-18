@@ -7,7 +7,8 @@
 
 <script>
 // @ is an alias to /src
-import SharedElement from "@/components/SharedElement.vue";
+// import SharedElement from "@/components/SharedElement.vue";
+import SharedElement from "vue-shared-element";
 
 export default {
   components: {

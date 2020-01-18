@@ -11,7 +11,8 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-import SharedElement from "@/components/SharedElement.vue";
+// import SharedElement from "@/components/SharedElement.vue";
+import SharedElement from "vue-shared-element";
 
 export default {
   name: "home",
