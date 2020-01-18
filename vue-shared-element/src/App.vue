@@ -1,20 +1,19 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SharedElement id="shared123" v-bind:duration="300">Slot by Jack</SharedElement>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SharedElement from "./components/SharedElement.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    SharedElement
   }
-}
+};
 </script>
 
 <style scoped>
-
 </style>

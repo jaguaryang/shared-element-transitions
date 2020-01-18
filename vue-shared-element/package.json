@@ -18,6 +18,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "html2canvas": "^1.0.0-rc.5",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
@@ -29,10 +30,10 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
+    "rules": {
+      "no-console": "off"
+    },
+    "parserOptions": {}
   },
   "browserslist": [
     "> 1%",
