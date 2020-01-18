@@ -7827,7 +7827,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.6.10:
+vue@^2.5.11, vue@^2.6.10:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
@@ -8164,3 +8164,10 @@ yorkie@^2.0.0:
     is-ci "^1.0.10"
     normalize-path "^1.0.0"
     strip-indent "^2.0.0"
+
+yyl-npm-practice@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/yyl-npm-practice/-/yyl-npm-practice-1.0.7.tgz#1ea9874ef82a20641af35414398e0610106912c4"
+  integrity sha512-RQLlBRKrp8/WiK79MoIRA8RaI8ZrlEa/Opu/GY6+M5xq+h7dYO5fia/gJJSUZqQiBgdMrFvSiqKoUeywYcsIqQ==
+  dependencies:
+    vue "^2.5.11"

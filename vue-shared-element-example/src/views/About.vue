@@ -1,18 +1,18 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <SharedElement id="jack123" v-bind:duration="500" class="test">about</SharedElement>
+    <shared-element id="jack123" v-bind:duration="500" class="test">about</shared-element>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+
 // import SharedElement from "@/components/SharedElement.vue";
 import SharedElement from "vue-shared-element";
 
 export default {
   components: {
-    SharedElement
+    'shared-element':SharedElement
   }
 };
 </script>

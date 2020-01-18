@@ -1,24 +1,25 @@
 <template>
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-    <SharedElement id="jack123" v-bind:duration="500" class="test">
+    <shared-element id="jack123" v-bind:duration="500" class="test">
       <div>home</div>
-    </SharedElement>
+    </shared-element>
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 // import SharedElement from "@/components/SharedElement.vue";
 import SharedElement from "vue-shared-element";
+import HelloWorld from "@/components/HelloWorld.vue";
+
+console.log(SharedElement)
 
 export default {
   name: "home",
   components: {
     HelloWorld,
-    SharedElement
+    'shared-element':SharedElement
   }
 };
 </script>

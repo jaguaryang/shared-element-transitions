@@ -1,12 +1,21 @@
-// import Vue from 'vue'
-// import App from './App.vue'
-// new Vue({
-//   el: '#app',
-//   render: h => h(App)
-// })
+import SharedElement from './SharedElement.vue';
 
-import SharedElement from './components/SharedElement.vue';
+export default SharedElement
 
-SharedElement.install = Vue => Vue.component(SharedElement.name, SharedElement);
+// SharedElement.install = Vue => Vue.component(SharedElement.name, SharedElement);
 
-export default SharedElement;
+// export default SharedElement;
+
+// export default {
+//   components: {
+//     SharedElement
+//   },
+// }
+
+// if (typeof window !== 'undefined' && window.Vue) {
+//   window.Vue.component('shared-element', SharedElement)
+// }
+// SharedElement.install = function (Vue) {
+//   Vue.component(SharedElement.name, SharedElement)
+// }
+// export default SharedElement
