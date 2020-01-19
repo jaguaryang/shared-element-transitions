@@ -4,19 +4,9 @@ import PropTypes from 'prop-types';
 
 class SharedElement extends React.Component {
 
-  constructor(props) {
-    // console.log('constructor')
-    super(props);
-  }
-
   componentDidMount() {
     // console.log('componentDidMount')
     this.transition()
-  }
-
-  componentDidUpdate() {
-    // console.log('componentDidUpdate')
-    // this.generate()
   }
 
   generate = (callback) => {
@@ -54,7 +44,6 @@ class SharedElement extends React.Component {
     let node = document.getElementById(id_common)
     if (!node) {
       this.visible(true)
-      // this.generate()
       return
     }
     node.style.display = 'block'
@@ -78,7 +67,6 @@ class SharedElement extends React.Component {
           this.props.transitionEnd()
         }
         this.visible(true)
-        // this.generate()
       }, duration);
     })
   }
