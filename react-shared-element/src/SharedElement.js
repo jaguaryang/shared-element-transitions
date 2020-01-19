@@ -16,7 +16,7 @@ class SharedElement extends React.Component {
 
   componentDidUpdate() {
     // console.log('componentDidUpdate')
-    this.generate()
+    // this.generate()
   }
 
   generate = (callback) => {
@@ -54,7 +54,7 @@ class SharedElement extends React.Component {
     let node = document.getElementById(id_common)
     if (!node) {
       this.visible(true)
-      this.generate()
+      // this.generate()
       return
     }
     node.style.display = 'block'
@@ -78,7 +78,7 @@ class SharedElement extends React.Component {
           this.props.transitionEnd()
         }
         this.visible(true)
-        this.generate()
+        // this.generate()
       }, duration);
     })
   }
