@@ -20,7 +20,7 @@ class SharedElement extends React.Component {
     }
 
     node = document.createElement("DIV");
-    node.setAttribute("style", "display: none; position: absolute; background-size: 100% 100%; transition: all " + (duration / 1000) + "s;");
+    node.setAttribute("style", "position: absolute; background-size: 100% 100%; transition: all " + (duration / 1000) + "s;");
     node.id = id_common;
     document.body.appendChild(node);
 
@@ -46,7 +46,6 @@ class SharedElement extends React.Component {
       this.visible(true)
       return
     }
-    node.style.display = 'block'
     this.visible(false)
 
     if (this.props.transitionStart) {
