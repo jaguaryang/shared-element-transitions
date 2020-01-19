@@ -13,6 +13,7 @@ class Component extends React.Component {
       sharedElement: React.createRef(),
       height: 200,
     })
+    this.ref = React.createRef()
   }
 
 
@@ -20,10 +21,11 @@ class Component extends React.Component {
     return (
       <div style={{ width: '600px', margin: 'auto', opacity: this.isTransitioning ? 0 : 1 }}>
         <div onClick={e => {
-          this.props.history.push("/component2")
+          this.ref.current.generate(() => this.props.history.push("/component2"))
         }}>Go Component2</div>
 
         <SharedElement
+          ref={this.ref}
           id='shared-id-123'
           style={{ width: 400, height: this.height, backgroundColor: 'red' }}
         >
