@@ -9,7 +9,7 @@ class SharedElement extends React.Component {
     this.transition()
   }
 
-  generate = (callback) => {
+  redirect = (callback) => {
     const { id, duration } = this.props
     if (!id) return
 

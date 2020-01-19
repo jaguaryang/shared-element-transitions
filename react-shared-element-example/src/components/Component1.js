@@ -21,7 +21,7 @@ class Component extends React.Component {
     return (
       <div style={{ width: '600px', margin: 'auto', opacity: this.isTransitioning ? 0 : 1 }}>
         <div onClick={e => {
-          this.ref.current.generate(() => this.props.history.push("/component2"))
+          this.ref.current.redirect(() => this.props.history.push("/component2"))
         }}>Go Component2</div>
 
         <SharedElement
