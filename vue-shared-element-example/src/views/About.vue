@@ -9,8 +9,6 @@
 
 <script>
 import router from "../router";
-
-// import SharedElement from "@/components/SharedElement.vue";
 import SharedElement from "vue-shared-element";
 
 export default {
@@ -19,7 +17,6 @@ export default {
   },
   methods: {
     redirect: function() {
-      console.log("greet");
       this.$refs.sharedElement.redirect(() => {
         router.push({ name: "home" });
       });
