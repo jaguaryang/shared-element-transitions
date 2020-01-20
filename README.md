@@ -72,9 +72,7 @@ export default {
   },
   methods: {
     redirect: function() {
-      this.$refs.sharedElement.redirect(() => {
-        router.push({ name: "home" })
-      })
+      this.$refs.sharedElement.redirect(() => router.push({ name: "home" }))
     }
   }
 }
