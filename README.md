@@ -30,10 +30,7 @@ import SharedElement from "react-shared-element"
 ##### Step2:
 
 ```html
-<SharedElement
-    ref={this.ref}
-    id='shared-id-123'
->
+<SharedElement ref={this.ref} id='shared-id-123'>
     Content of Component1
 </SharedElement>
 ```
