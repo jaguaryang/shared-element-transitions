@@ -1,7 +1,7 @@
 {
   "name": "vue-shared-element",
   "description": "A Vue.js project",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "author": "",
   "license": "MIT",
   "main": "dist/build.js",
