@@ -1,7 +1,7 @@
 {
   "name": "vue-shared-element",
   "description": "Shared element transition for vue. Fly the component from one screen to another.",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "Jack Yang",
   "license": "MIT",
   "main": "dist/build.js",
