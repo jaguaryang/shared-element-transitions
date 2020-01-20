@@ -103,10 +103,10 @@ export default {
   mounted() {
     // console.log("mounted");
     this.transition();
-    setTimeout(() => {}, 100);
   },
   updated() {
     // console.log("updated");
+    this.transition();
   }
 };
 </script>
