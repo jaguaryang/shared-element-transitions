@@ -80,4 +80,13 @@ export default {
 </script>
 ```
 
+# Parameters
+
+name | type | default | optional
+--- | --- | --- | ---
+`id` | *string* | null | **required**
+`duration` | *number* | 300 | 
+`zindex` | *number* | 1 | 
+
+
 Enjoy coding!
