@@ -45,13 +45,13 @@ import SharedElement from "react-shared-element"
 
 ### Vue
 
-Step1:
+##### Step1:
 
 ```jsx
 import SharedElement from "vue-shared-element"
 ```
 
-Step2:
+##### Step2:
 
 ```html
 <shared-element ref="sharedElement" id="shared-id-123">
@@ -59,7 +59,7 @@ Step2:
 </shared-element>
 ```
 
-Step3:
+##### Step3:
 
 ```jsx
 <script>
