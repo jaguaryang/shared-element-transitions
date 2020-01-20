@@ -1,5 +1,6 @@
-# shared-element-transitions
-shared element transitions between routers for React, Vue and Angular. Idea from Hero Animations of Flutter.
+# shared-element-transitions 
+
+Shared element transitions between routers for React, Vue, Angular and Web applications. Idea from Hero Animations of Flutter, and other mobile applications.
 
 # Install
 
