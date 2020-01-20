@@ -92,21 +92,21 @@ export default {
     }
   }, // end of methods
   beforeCreate() {
-    console.log("beforeCreate");
+    // console.log("beforeCreate");
   },
   created() {
-    console.log("created");
+    // console.log("created");
   },
   beforeMount() {
-    console.log("beforeMount");
+    // console.log("beforeMount");
   },
   mounted() {
-    console.log("mounted");
+    // console.log("mounted");
     this.transition();
     setTimeout(() => {}, 100);
   },
   updated() {
-    console.log("updated");
+    // console.log("updated");
   }
 };
 </script>
