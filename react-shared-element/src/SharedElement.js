@@ -9,8 +9,12 @@ class SharedElement extends React.Component {
     this.transition()
   }
 
+  componentDidUpdate() {
+    this.transition()
+  }
+
   redirect = (callback) => {
-    const { id, duration } = this.props
+    const { id, duration, zindex } = this.props
     if (!id) return
 
     let id_common = id + "-common"
@@ -20,7 +24,7 @@ class SharedElement extends React.Component {
     }
 
     node = document.createElement("DIV");
-    node.setAttribute("style", "position: absolute; background-size: 100% 100%; transition: all " + (duration / 1000) + "s;");
+    node.setAttribute("style", "position: absolute; background-size: 100% 100%; transition: all " + (duration / 1000) + "s; z-index: " + zindex + ";");
     node.id = id_common;
     document.body.appendChild(node);
 
@@ -92,10 +96,12 @@ class SharedElement extends React.Component {
 SharedElement.propTypes = {
   id: PropTypes.string.isRequired,
   duration: PropTypes.number,
+  zindex: PropTypes.number,
 }
 
 SharedElement.defaultProps = {
   duration: 300,
+  zindex: 1,
 }
 
 export default SharedElement
