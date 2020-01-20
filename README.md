@@ -5,13 +5,13 @@ shared element transitions between routers for React, Vue and Angular. Idea from
 
 ### React
 
-```bash
+```jsx
 yarn add react-shared-element
 ```
 
 ### Vue
 
-```bash
+```jsx
 yarn add vue-shared-element
 ```
 
@@ -23,7 +23,7 @@ Both routes use the SharedElement component and the id must to be the same. It c
 
 ##### Step1
 
-```bash
+```jsx
 import SharedElement from "react-shared-element"
 ```
 
@@ -50,7 +50,7 @@ import SharedElement from "react-shared-element"
 
 Step1:
 
-```js
+```jsx
 import SharedElement from "vue-shared-element";
 ```
 
@@ -64,7 +64,7 @@ Step2:
 
 Step3:
 
-```js
+```jsx
 <script>
 import router from "../router";
 import SharedElement from "vue-shared-element";
