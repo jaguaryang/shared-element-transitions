@@ -1,27 +1,39 @@
 # shared-element-transitions
 shared element transitions between routers for React, Vue and Angular
 
-Install:
+# Install
 
-React:
+### React
 
+```bash
 yarn add react-shared-element-transitions
+```
 
-Vue:
+### Vue
 
+```bash
 yarn add vue-shared-element-transitions
+```
 
-Use:
+# Use
 
-React:
+### React
 
-Step1:
+##### Step1
+
+```bash
 import SharedElement from "react-shared-element"
+```
 
-Step2:
+##### Step2:
+
+```bash
 this.ref = React.createRef()
+```
 
-Step3:
+##### Step3:
+
+```bash
 <SharedElement
     ref={this.ref}
     id='shared-id-123'
@@ -29,24 +41,35 @@ Step3:
 >
     Content of Component1
 </SharedElement>
+```
 
-Step4:
+#####Step4:
+
+```bash
 <div onClick={e => {
     this.ref.current.redirect(() => this.props.history.push("/component2"))
 }}>Go Component2</div>
+```
 
-
-Vue:
+### Vue
 
 Step1:
+
+```bash
 import SharedElement from "vue-shared-element";
+```
 
 Step2:
+
+```bash
 <shared-element ref="sharedElement" id="jack123" v-bind:duration="500" class="test">
     <div v-on:click="redirect">Go Home</div>
 </shared-element>
+```
 
 Step3:
+
+```bash
 <script>
 import router from "../router";
 import SharedElement from "vue-shared-element";
@@ -64,3 +87,4 @@ export default {
   }
 };
 </script>
+```
