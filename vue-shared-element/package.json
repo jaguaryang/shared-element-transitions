@@ -1,10 +1,11 @@
 {
   "name": "vue-shared-element",
-  "description": "A Vue.js project",
-  "version": "1.0.6",
-  "author": "",
+  "description": "Shared element transition for vue. Fly the component from one screen to another.",
+  "version": "1.0.7",
+  "author": "Jack Yang",
   "license": "MIT",
   "main": "dist/build.js",
+  "repository": "https://github.com/jaguaryang/shared-element-transitions",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
