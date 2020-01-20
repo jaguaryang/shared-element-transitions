@@ -6,13 +6,13 @@ shared element transitions between routers for React, Vue and Angular
 ### React
 
 ```bash
-yarn add react-shared-element-transitions
+yarn add react-shared-element
 ```
 
 ### Vue
 
 ```bash
-yarn add vue-shared-element-transitions
+yarn add vue-shared-element
 ```
 
 # Use
