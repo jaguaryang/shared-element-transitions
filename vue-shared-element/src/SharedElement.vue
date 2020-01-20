@@ -32,7 +32,6 @@ export default {
       let node = document.getElementById(id_common);
       if (!node) {
         this.visible(true);
-        this.generate();
         return;
       }
       node.style.display = "block";
@@ -56,11 +55,10 @@ export default {
             this.transitionEnd();
           }
           this.visible(true);
-          this.generate();
         }, this.duration);
       });
     },
-    generate: function() {
+    redirect: function(callback) {
       let id_common = this.id + "-common";
       let node = document.getElementById(id_common);
       if (node) {
@@ -85,6 +83,7 @@ export default {
         node.style.width = canvas.width + "px";
         node.style.height = canvas.height + "px";
         node.style.background = "url(" + canvas.toDataURL() + ")";
+        if (callback) callback()
       });
     },
     visible: function(bol) {
@@ -107,7 +106,7 @@ export default {
     setTimeout(() => {}, 100);
   },
   updated() {
-    this.generate();
+    console.log("updated");
   }
 };
 </script>

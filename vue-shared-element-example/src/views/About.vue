@@ -1,18 +1,29 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <shared-element id="jack123" v-bind:duration="500" class="test">about</shared-element>
+    <shared-element ref="sharedElement" id="jack123" v-bind:duration="500" class="test">
+      <div v-on:click="redirect">Go Home</div>
+    </shared-element>
   </div>
 </template>
 
 <script>
+import router from "../router";
 
 // import SharedElement from "@/components/SharedElement.vue";
 import SharedElement from "vue-shared-element";
 
 export default {
   components: {
-    'shared-element':SharedElement
+    "shared-element": SharedElement
+  },
+  methods: {
+    redirect: function() {
+      console.log("greet");
+      this.$refs.sharedElement.redirect(() => {
+        router.push({ name: "home" });
+      });
+    }
   }
 };
 </script>
