@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-    <shared-element ref="sharedElement" id="jack123" v-bind:duration="500" class="test">
+    <shared-element ref="sharedElement" id="jack123" v-bind:duration="999999" v-bind:zindex="4" class="test">
       <div v-on:click="redirect">Go About</div>
     </shared-element>
     <HelloWorld msg="Welcome to Your Vue.js App" />

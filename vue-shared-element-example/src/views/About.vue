@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <shared-element ref="sharedElement" id="jack123" v-bind:duration="500" class="test">
+    <shared-element ref="sharedElement" id="jack123" v-bind:duration="999999" v-bind:zindex="4" class="test">
       <div v-on:click="redirect">Go Home</div>
     </shared-element>
   </div>

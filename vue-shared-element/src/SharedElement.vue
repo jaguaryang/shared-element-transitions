@@ -15,6 +15,10 @@ export default {
       type: Number,
       default: 300
     },
+    zindex: {
+      type: Number,
+      default: 1
+    },
     transitionStart: Function,
     transitionEnd: Function
   },
@@ -70,7 +74,9 @@ export default {
         "style",
         "display: none; position: absolute; background-size: 100% 100%; transition: all " +
           this.duration / 1000 +
-          "s;"
+          "s; z-index: " +
+          this.zindex +
+          "; "
       );
       node.id = id_common;
       document.body.appendChild(node);
@@ -83,7 +89,7 @@ export default {
         node.style.width = canvas.width + "px";
         node.style.height = canvas.height + "px";
         node.style.background = "url(" + canvas.toDataURL() + ")";
-        if (callback) callback()
+        if (callback) callback();
       });
     },
     visible: function(bol) {
