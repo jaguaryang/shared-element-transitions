@@ -33,7 +33,6 @@ import SharedElement from "react-shared-element"
 <SharedElement
     ref={this.ref}
     id='shared-id-123'
-    style={{ width: 400, height: this.height, backgroundColor: 'red' }}
 >
     Content of Component1
 </SharedElement>
@@ -58,7 +57,7 @@ import SharedElement from "vue-shared-element";
 Step2:
 
 ```html
-<shared-element ref="sharedElement" id="jack123" v-bind:duration="500" class="test">
+<shared-element ref="sharedElement" id="shared-id-123">
     <div v-on:click="redirect">Go Home</div>
 </shared-element>
 ```
