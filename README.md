@@ -17,7 +17,7 @@ yarn add vue-shared-element
 
 # Use
 
-Both routes use the SharedElement component and the id must to be the same. It can be a dynamic ID and supports asynchronous.
+Both routes use the SharedElement component and the id must to be the same. It can be a dynamic id and supports asynchronous.
 
 ### React
 
