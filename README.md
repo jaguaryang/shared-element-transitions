@@ -21,7 +21,7 @@ Both routes use the SharedElement component and the id must to be the same. It c
 
 ### React
 
-##### Step1
+##### Step1:
 
 ```jsx
 import SharedElement from "react-shared-element"
@@ -48,7 +48,7 @@ import SharedElement from "react-shared-element"
 Step1:
 
 ```jsx
-import SharedElement from "vue-shared-element";
+import SharedElement from "vue-shared-element"
 ```
 
 Step2:
@@ -63,8 +63,8 @@ Step3:
 
 ```jsx
 <script>
-import router from "../router";
-import SharedElement from "vue-shared-element";
+import router from "../router"
+import SharedElement from "vue-shared-element"
 
 export default {
   components: {
@@ -73,11 +73,11 @@ export default {
   methods: {
     redirect: function() {
       this.$refs.sharedElement.redirect(() => {
-        router.push({ name: "home" });
-      });
+        router.push({ name: "home" })
+      })
     }
   }
-};
+}
 </script>
 ```
 
