@@ -27,13 +27,7 @@ import SharedElement from "react-shared-element"
 
 ##### Step2:
 
-```bash
-this.ref = React.createRef()
-```
-
-##### Step3:
-
-```bash
+```html
 <SharedElement
     ref={this.ref}
     id='shared-id-123'
@@ -43,9 +37,9 @@ this.ref = React.createRef()
 </SharedElement>
 ```
 
-##### Step4:
+##### Step3:
 
-```bash
+```html
 <div onClick={e => {
     this.ref.current.redirect(() => this.props.history.push("/component2"))
 }}>Go Component2</div>
@@ -55,13 +49,13 @@ this.ref = React.createRef()
 
 Step1:
 
-```bash
+```js
 import SharedElement from "vue-shared-element";
 ```
 
 Step2:
 
-```bash
+```html
 <shared-element ref="sharedElement" id="jack123" v-bind:duration="500" class="test">
     <div v-on:click="redirect">Go Home</div>
 </shared-element>
@@ -69,7 +63,7 @@ Step2:
 
 Step3:
 
-```bash
+```js
 <script>
 import router from "../router";
 import SharedElement from "vue-shared-element";
