@@ -1,3 +1,9 @@
+<style>
+table {
+    width:100%;
+}
+</style>
+
 # shared-element-transitions 
 
 Shared element transitions between routers for React, Vue, Angular and Web applications. Idea from Hero Animations of Flutter, and other mobile applications.
@@ -88,9 +94,5 @@ export default {
 | `duration` | *number* | 300     |
 | `zindex`   | *number* | 1       |
 
-<style>
-table {
-    width:100%;
-}
-</style>
+
 Enjoy coding!
