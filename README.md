@@ -43,7 +43,7 @@ this.ref = React.createRef()
 </SharedElement>
 ```
 
-#####Step4:
+##### Step4:
 
 ```bash
 <div onClick={e => {
