@@ -82,11 +82,13 @@ export default {
 
 # Parameters
 
-| name       | type     | default | optional |
+| name       | type     | default | required |
 |------------|----------|---------|--|
 | `id`       | *string* | null    | **required** |
-| `duration` | *number* | 300     |
-| `zindex`   | *number* | 1       |
+| `duration` | *number* | 300     | optional
+| `zindex`   | *number* | 1       | optional
+
+
 
 
 Enjoy coding!
