@@ -1,6 +1,6 @@
 # shared-element-transitions 
 
-English | [简体中文](./README-zh_CN.md)
+English | [中文](./README-zh_CN.md)
 
 > Shared element transitions between routers for React, Vue, Angular and Web applications. Idea from Hero Animations of Flutter, and other mobile applications.
 

@@ -1,6 +1,6 @@
 # shared-element-transitions 
 
-[English](./README.md) | 简体中文
+[English](./README.md) | 中文
 
 > 单页面应用程序跨组件的动画，在路由的过程中，从一个组件飞到另外一个组件。用于React，Vue，Angular和Web应用程序的路由器之间的共享元素转换。 思路来自于Flutter的Hero动画和其他Android移动应用程序。
 
