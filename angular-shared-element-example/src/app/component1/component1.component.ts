@@ -20,7 +20,6 @@ export class Component1Component implements OnInit {
     this.SharedElement.redirect(() => {
       this.router.navigate(['/component2'])
     });
-
   }
 
 

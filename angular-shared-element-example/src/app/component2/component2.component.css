@@ -3,6 +3,7 @@ div {
     height: 400px;
     background-color: aqua;
     color: white;
+    margin: auto;
     /* float: right; */
   }
   

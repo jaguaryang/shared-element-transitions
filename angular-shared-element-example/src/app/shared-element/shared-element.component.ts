@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import html2canvas from 'html2canvas'
 
 @Component({
-  selector: 'SharedElement',
+  selector: '[SharedElement]',
   templateUrl: './shared-element.component.html',
   styleUrls: ['./shared-element.component.css']
 })
@@ -21,6 +21,7 @@ export class SharedElementComponent implements OnInit {
 
   ngAfterViewInit() {
     this.transition()
+
   }
 
   redirect = (callback) => {
