@@ -26,6 +26,7 @@ class SharedElement extends React.Component {
     node = document.createElement("DIV");
     node.setAttribute("style", "position: absolute; background-size: 100% 100%; transition: all " + (duration / 1000) + "s; z-index: " + zindex + ";");
     node.id = id_common;
+    node.className = "shared-element-transitions-any"
     document.body.appendChild(node);
 
     let current = document.getElementById(id)
@@ -47,6 +48,10 @@ class SharedElement extends React.Component {
     let id_common = id + "-common"
     let node = document.getElementById(id_common)
     if (!node) {
+      node = document.getElementsByClassName("shared-element-transitions-any")
+      while (node.length > 0) {
+        node[0].parentNode.removeChild(node[0]);
+      }
       this.visible(true)
       return
     }
