@@ -1,6 +1,6 @@
 {
   "name": "react-shared-element",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Shared element transition for react. Fly the component from one screen to another.",
   "main": "lib/main.js",
   "repository": "https://github.com/jaguaryang/shared-element-transitions",
