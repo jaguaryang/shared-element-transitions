@@ -1,36 +1,36 @@
 <template>
   <div class="home">
-    <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-    <shared-element ref="sharedElement" id="jack123" v-bind:duration="300" v-bind:zindex="4" class="test">
-      <div v-on:click="redirect">Go About</div>
+    <h1>This is an home page</h1>
+    <button type="button" v-on:click="redirect">Go About</button>
+    <shared-element
+      ref="sharedElement"
+      id="jack123"
+      v-bind:duration="300"
+      v-bind:zindex="4"
+      class="test"
+    >
+      <button type="button" v-on:click="redirect">Go About</button>
     </shared-element>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
 import router from "../router";
-
-// import SharedElement from "@/components/SharedElement.vue";
 import SharedElement from "vue-shared-element";
-import HelloWorld from "@/components/HelloWorld.vue";
-
-console.log(SharedElement);
 
 export default {
   name: "home",
   components: {
-    HelloWorld,
-    "shared-element": SharedElement
+    "shared-element": SharedElement,
   },
   methods: {
-    redirect: function() {
+    redirect: function () {
       console.log("greet");
       this.$refs.sharedElement.redirect(() => {
         router.push({ name: "about" });
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
