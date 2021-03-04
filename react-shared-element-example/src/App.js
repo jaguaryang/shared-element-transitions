@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Component1 from './components/Component1'
 import Component2 from './components/Component2'
 
-const Index = () => <div className='text-center'></div>;
+const Index = () => <div style={{textAlign: 'center', margin: '20px 0'}}><a href='component1'>Start</a></div>;
 
 const AppRouter = () => (
   <BrowserRouter>
