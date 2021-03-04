@@ -20,9 +20,10 @@ class Component extends React.Component {
   render() {
     return (
       <div style={{ width: '600px', margin: 'auto', opacity: this.isTransitioning ? 0 : 1 }}>
-        <div onClick={e => {
+
+        <button type="button" onClick={e => {
           this.ref.current.redirect(() => this.props.history.push("/component2"))
-        }}>Go Component2</div>
+        }} style={{ margin: '15px 0' }}>Go Component2</button>
 
         <SharedElement
           ref={this.ref}
@@ -32,9 +33,9 @@ class Component extends React.Component {
           Content of Component1
         </SharedElement>
 
-        <div onClick={e => {
+        <button type="button" onClick={e => {
           this.height = 500
-        }}>Change Props</div>
+        }} style={{ margin: '15px 0' }}>Change Props</button>
 
       </div>
     )

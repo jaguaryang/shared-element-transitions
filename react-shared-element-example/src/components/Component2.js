@@ -19,9 +19,10 @@ class Component extends React.Component {
   render() {
     return (
       <div style={{ width: '200px', margin: '300px auto 0', opacity: this.isTransitioning ? 0 : 1 }}>
-        <div onClick={e => {
+        
+        <button type="button" onClick={e => {
           this.ref.current.redirect(() => this.props.history.push("/component1"))
-        }}>Go Component1</div>
+        }} style={{ margin: '15px 0' }}>Go Component1</button>
 
         <SharedElement
           ref={this.ref}
